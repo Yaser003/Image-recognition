@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}Man vs. Machine{% endblock %}
+
+{% block content %}
+    <h1>Man vs. Machine</h1>
+
+<!--     <script>
+        function start() {
+            xhttp = XMLHttpRequest();
+            xhttp.open("GET", )
+        }
+    </script> -->
+
+    {% if start|default(False) == False: %}
+<!--     <input type="submit" onclick="click()" name="start" value="Start"> -->
+    <button id="start" onclick="click()">Start</button>
+    {% else %}
+    <input type="submit" name="choice1" value="{{choice1}}">
+    <input type="submit" name="choice2" value="{{choice2}}">
+    <input type="submit" name="choice3" value="{{choice3}}">
+    <input type="submit" name="choice4" value="{{choice4}}">
+    {% endif %}
+    <script src="../static/mvm.js"></script>
+{% endblock %}
